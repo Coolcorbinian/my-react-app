@@ -8,3 +8,6 @@ deployment:
     - echo "Files copied, starting npm install"
     - cd $DEPLOYPATH && npm install --production
     - echo "npm install completed"
+    - echo "Starting build process"
+    - cd $DEPLOYPATH && npm run build
+    - echo "Build completed - deployment finished"
