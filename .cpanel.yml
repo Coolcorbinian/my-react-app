@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/d187bf5/my-react-app
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH/
     - cd $DEPLOYPATH && npm install --production
     - cd $DEPLOYPATH && npm run build
